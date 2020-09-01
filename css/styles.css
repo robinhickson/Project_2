@@ -1,0 +1,322 @@
+/* Project 2 -- responsive web design ++++++ */
+
+
+/*Base setup++++  Mobile-first design Remove some default user agent styles */
+
+
+/* Elements */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 95%;
+    /* page boundary */
+    margin: auto;
+    font-family: 'Mali', sans-serif;
+    color: rgb(163, 33, 16);
+    background: whitesmoke;
+    text-align: center;
+}
+
+h1 {
+    /*remove collapsible margins*/
+    margin: 0;
+    padding-top: 20px
+}
+
+h2 {
+    /*remove collapsible margins*/
+    margin: 0;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    font-size: 1em;
+}
+
+h3 {
+    font-weight: normal;
+}
+
+p {
+    margin: 1em;
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+ul {
+    padding: 1em;
+}
+
+li {
+    list-style-type: none;
+    text-align: center;
+    margin: 0.2em;
+    background-color: rgb(163, 33, 16);
+    border-radius: 6px;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: 700;
+    width: 100%;
+    display: block;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+a:hover {
+    color: whitesmoke;
+}
+
+img {
+    width: 90%;
+    border-bottom: 4px solid rgb(163, 33, 16);
+    border-right: 4px solid rgb(163, 33, 16);
+    border-radius: 8px;
+}
+
+img:hover {
+    border-color: rgb(0, 0, 0, 0.5);
+}
+
+main {
+    text-align: center;
+    background-color: white;
+}
+
+footer {
+    padding-top: 2em;
+}
+
+section {
+    padding-bottom: 2em;
+}
+
+address {
+    font-style: normal;
+    padding-bottom: 3em;
+}
+
+hr {
+    opacity: 20%;
+    margin: 1em 0;
+}
+
+
+/* Classes and IDs*/
+
+.container {
+    border-radius: 6px;
+}
+
+.profile_picture {
+    width: 70%;
+    border-bottom: 4px solid rgb(163, 33, 16);
+    border-right: 4px solid rgb(163, 33, 16);
+}
+
+.card {
+    margin: 1em 0.7em;
+    text-align: center;
+    background-color: rgb(219, 177, 51);
+    border-bottom: 4px solid rgb(163, 33, 16);
+    border-right: 4px solid rgb(163, 33, 16);
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.card:hover {
+    border-color: rgb(0, 0, 0, 0.5);
+}
+
+.card ul {
+    padding: 5px;
+    text-align: center;
+}
+
+.skills li {
+    border-radius: 6px;
+    display: inline-block;
+    background: rgb(32, 221, 42);
+    padding: 5px 10px;
+}
+
+.skills li:nth-child(odd) {
+    background: rgba(9, 211, 247, 0.651);
+}
+
+#my_skills_link {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color: white;
+    border-radius: 6px;
+}
+
+.footer_name {
+    display: inline-block;
+    margin: 0;
+}
+
+.footer_nav_links {
+    display: none;
+}
+
+.mobile_nav_link {
+    display: inline-block;
+    margin: 0;
+}
+
+.mobile_nav_link a {
+    color: rgb(163, 33, 16);
+}
+
+.footer_nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+
+
+/* 768 === Staggered breakpoints responsive design === 768 */
+
+@media only screen and (min-width: 768px) {
+    /* Elements */
+    h2 {
+        font-size: 125%;
+    }
+    li {
+        display: inline-block;
+        width: 7em;
+    }
+    /* Classes and IDs*/
+    .intro_text {
+        margin: 2em 0;
+        float: left;
+        width: 55%;
+        padding-top: 0.2em;
+        padding-right: 1em;
+        font-weight: 700;
+        text-align: left;
+    }
+    .profile_picture {
+        width: 45%;
+        float: right;
+        margin: 2em 0;
+    }
+    .marketing {
+        width: 50%;
+        float: left;
+    }
+    .search {
+        width: 50%;
+        float: right;
+    }
+    .travel {
+        width: 50%;
+        float: left;
+    }
+    .map {
+        width: 50%;
+        float: right;
+    }
+    .gallery {
+        width: 50%;
+        float: left;
+    }
+    .calculator {
+        width: 50%;
+        float: right;
+    }
+    .wrapper {
+        width: 70%;
+        margin: 0 auto;
+    }
+    .footer_nav_links {
+        display: inline-block;
+        margin-top: 0;
+        padding-top: 0;
+    }
+    .mobile_nav_link {
+        display: none;
+    }
+    .footer_nav_links li {
+        display: inline-block;
+        margin-top: 0;
+        padding-top: 0;
+        background-color: whitesmoke;
+    }
+    .footer_nav_links li>a {
+        color: rgb(163, 33, 16);
+    }
+}
+
+
+/* 1024 === Staggered breakpoints responsive design === 1024 */
+
+
+/* Elements */
+
+@media only screen and (min-width: 1024px) {
+    body {
+        width: 80%;
+        max-width: 1200px;
+    }
+    h1 {
+        margin: 1em 0;
+        float: left;
+    }
+    h2 {
+        font-size: 150%;
+    }
+    p {
+        font-size: 125%;
+    }
+    /* Classes and IDs*/
+    .intro_text {
+        width: 60%;
+    }
+    .profile_picture {
+        width: 40%;
+    }
+    .nav {
+        float: right;
+    }
+    .marketing {
+        width: 33%;
+        float: left;
+    }
+    .search {
+        width: 33%;
+        float: left;
+    }
+    .travel {
+        width: 33%;
+        float: left;
+    }
+    .map {
+        width: 33%;
+        float: left;
+    }
+    .gallery {
+        width: 33%;
+        float: left;
+    }
+    .calculator {
+        width: 33%;
+        float: left;
+    }
+    .footer_nav {
+        margin-bottom: 0em;
+    }
+}
+
+
+/*Clearfix*/
+
+.group::after {
+    content: "";
+    clear: both;
+    display: table;
+}
